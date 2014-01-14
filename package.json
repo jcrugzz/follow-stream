@@ -1,7 +1,7 @@
 {
   "name": "follow-stream",
   "description": "A simple stream wrapper around the follow api that proxy's the catchup event to the surface. ",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Jarrett Cruger <jcrugzz@gmail.com>",
   "repository": {
     "url": "git://github.com/jcrugzz/follow-stream.git"
