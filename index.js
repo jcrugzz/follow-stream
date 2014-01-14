@@ -31,6 +31,11 @@ function FollowStream (options) {
   this.feed.on('catchup', this.emit.bind(this, 'catchup'));
 
   this.feed.on('change', this._onChange.bind(this));
+  //
+  // Remark: we want to start buffering changes once we are instatiated
+  //
+  this.feed.follow();
+  this.started = true
 
 }
 
@@ -39,12 +44,7 @@ FollowStream.prototype.stop = function () {
   this.feed.stop();
 };
 
-FollowStream.prototype._read = function (n) {
-  if (!this.started) {
-    this.feed.follow()
-    this.started = true;
-  }
-};
+FollowStream.prototype._read = function (n) {};
 
 FollowStream.prototype._onChange = function (change) {
   //
