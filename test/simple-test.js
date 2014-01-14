@@ -3,7 +3,10 @@ var async = require('async');
 var followStream = require('../');
 var hyperquest = require('hyperquest');
 
-var url = 'http://test:testauth@localhost:5984/testdb';
+var url = !process.env['TRAVIS']
+  ? 'http://test:testauth@localhost:5984/testdb'
+  : 'http://127.0.0.1:5984/testdb';
+
 var docs = {
   testdoc1: {
     _id: 'testdoc1',
