@@ -1,0 +1,25 @@
+{
+  "name": "follow-stream",
+  "description": "A simple stream wrapper around the follow api that proxy's the catchup event to the surface. ",
+  "version": "0.0.0",
+  "author": "Jarrett Cruger <jcrugzz@gmail.com>",
+  "repository": {
+    "url": "git://github.com/jcrugzz/follow-stream.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "follow": "~0.10.4"
+  },
+  "devDependencies": {
+    "hyperquest": "~0.2.0",
+    "async": "~0.2.9",
+    "tape": "~2.3.2"
+  },
+  "license": "MIT"
+}
